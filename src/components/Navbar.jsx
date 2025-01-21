@@ -1,15 +1,14 @@
 export default function Navbar() {
     return (
-        <nav className="bg-primary p-4 text-white fixed w-full top-0 z-10">
-            <div className="container mx-auto flex justify-between">
-                <h1 className="text-2xl font-bold">Duy Cong</h1>
-                <ul className="flex space-x-6">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+        <nav className="fixed top-0 w-full bg-black/30 backdrop-blur-lg py-4 px-8 flex justify-between items-center border-b border-neon-pink z-10">
+            <h1 className="text-neon-cyan text-2xl font-bold">DUY CONG</h1>
+            <ul className="flex space-x-6 text-white">
+                {["About", "Projects", "Skills", "Contact"].map((item) => (
+                    <li key={item} className="hover:text-neon-pink transition">
+                        <a href={`#${item.toLowerCase()}`}>{item}</a>
+                    </li>
+                ))}
+            </ul>
         </nav>
     );
 }
