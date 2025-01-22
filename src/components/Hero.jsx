@@ -1,16 +1,31 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 
 export default function Hero() {
     return (
-        <section className="h-screen flex items-center justify-center text-center bg-hero-pattern bg-cover">
-            <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
+        <motion.section
+            id="hero"
+            className="text-center py-20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+        >
+            <motion.h1
+                className="text-5xl font-bold mb-4"
+                initial={{ y: -50 }}
+                animate={{ y: 0 }}
+                transition={{ type: "spring", stiffness: 100 }}
             >
-                <h1 className="text-6xl font-bold text-white glitch">Hi, I'm <span className="text-neon-cyan">Duy Cong</span></h1>
-                <p className="mt-4 text-lg text-neon-pink">Data Engineer with a cyberpunk touch</p>
-            </motion.div>
-        </section>
-    );
+                Ngo Truong Duy Cong
+            </motion.h1>
+            <motion.p
+                className="text-xl"
+                initial={{ y: 50 }}
+                animate={{ y: 0 }}
+                transition={{ type: "spring", stiffness: 100 }}
+            >
+                Data Engineer
+            </motion.p>
+        </motion.section>
+    )
 }
+
