@@ -5,6 +5,8 @@
 :root {
   --primary: 78, 104, 19;
   --background: 240, 234, 214;
+  /* --primary: 240, 234, 214;
+  --background: 78, 104, 19; */
 }
 
 body {

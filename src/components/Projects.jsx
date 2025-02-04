@@ -8,14 +8,14 @@ export default function Projects() {
                 "Designed and implemented an end-to-end pipeline for weather data collection, processing, and forecasting. Conducted cross-validation and feature engineering for machine learning models (Random Forest, XGBoost). Developed a Grafana dashboard for visualizing real-time and historical weather data.",
             technologies:
                 "WeatherAPI (data source) → Kafka (streaming) → Spark (real-time processing) → Cassandra (data storage)",
-            github: "https://github.com/yourusername/weather-forecasting",
+            github: "https://github.com/dkon911/weather_streamming",
             date: "Mar 2024 – Nov 2024",
         },
         {
             name: "How Vietnamese use their time",
             description:
                 "Analyzed a dataset to explore how Vietnamese people allocate time to daily activities. Cleaned and pre-processed data using Python (Pandas, NumPy). Visualized data trends and insights using Matplotlib and Tableau. Conducted descriptive statistics and pattern analysis to understand time usage behavior.",
-            github: "https://github.com/yourusername/vietnamese-time-usage",
+            github: "https://github.com/dkon911/How_Vietnamese_ppl_spend_their_time/blob/main/demoASM2.ipynb",
             date: "Aug 2023 – Sep 2023",
         },
     ]

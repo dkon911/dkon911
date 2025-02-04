@@ -27,7 +27,7 @@ export default function Contact() {
                 <div className="flex items-center space-x-2">
                     <Linkedin className="w-6 h-6" />
                     <a
-                        href="https://www.linkedin.com/in/yourusername"
+                        href="https://www.linkedin.com/in/ngo-truong-duy-cong-697726267/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:underline"
