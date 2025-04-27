@@ -27,15 +27,10 @@ I'm a passionate **Data Engineer** with experience in building and optimizing da
 
 ---
 
-## 📫 How to reach me:
+## 📫 Contact me:
 
 - Email: [Here](mailto:dkon.de31337@gmail.com)
 - LinkedIn: [Here](https://www.linkedin.com/in/ngo-truong-duy-cong-697726267/)
 
----
-
-> "Data is the new oil." — Clive Humby
-
----
 
 Thanks for visiting my profile! 🙌
