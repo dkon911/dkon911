@@ -34,7 +34,7 @@ export default function Contact() {
                              <Linkedin className="w-6 h-6 text-neo-black" />
                         </div>
                         <a
-                            href="https://www.linkedin.com/in/ngo-truong-duy-cong-697726267/"
+                            href="https://www.linkedin.com/in/cong-ngo-truong-duy-697726267/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-lg font-bold hover:underline decoration-2 underline-offset-4"
