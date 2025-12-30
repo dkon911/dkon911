@@ -13,7 +13,7 @@ export default function Hero() {
             
             <div className="relative z-10">
                 <motion.h1
-                    className="text-5xl md:text-8xl font-display font-bold mb-6 uppercase text-neo-black tracking-tighter"
+                    className="text-4xl md:text-8xl font-display font-bold mb-6 uppercase text-neo-black tracking-tighter"
                     initial={{ y: -50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
