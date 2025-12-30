@@ -28,33 +28,33 @@ export default function Projects() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <h2 className="text-3xl font-bold mb-4">Projects</h2>
+            <h2 className="text-4xl font-display uppercase border-b-4 border-neo-black mb-8 inline-block">Projects</h2>
             <div className="space-y-8">
                 {projects.map((project, index) => (
                     <motion.div
                         key={project.name}
-                        className="bg-primary bg-opacity-10 p-6 rounded-lg"
+                        className="bg-neo-white border-2 border-neo-black p-6 shadow-hard hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all relative overflow-hidden"
                         initial={{ x: -50, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: index * 0.1 }}
                     >
-                        <h3 className="text-2xl font-semibold mb-2">{project.name}</h3>
-                        <p className="text-sm text-gray-600 mb-2">{project.date}</p>
-                        <p className="mb-2">{project.description}</p>
+                         <div className="absolute top-0 right-0 w-16 h-16 bg-halftone opacity-10"></div>
+                        <h3 className="text-2xl font-bold uppercase mb-2">{project.name}</h3>
+                        <p className="text-sm font-mono bg-neo-white border border-neo-black inline-block px-2 mb-4">{project.date}</p>
+                        <p className="mb-4 font-medium">{project.description}</p>
                         {project.technologies && (
-                            <p className="mb-2">
+                            <p className="mb-4 p-3 bg-neo-yellow/20 border-l-4 border-neo-black">
                                 <strong>Key Technologies:</strong> {project.technologies}
                             </p>
                         )}
                         <p>
-                            <strong>Github:</strong>{" "}
                             <a
                                 href={project.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-primary hover:underline"
+                                className="inline-block bg-neo-black text-neo-white font-bold py-2 px-4 hover:bg-neo-white hover:text-neo-black border-2 border-neo-black transition-colors"
                             >
-                                Here
+                                View on Github
                             </a>
                         </p>
                     </motion.div>

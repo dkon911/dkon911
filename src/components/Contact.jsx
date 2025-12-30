@@ -10,30 +10,38 @@ export default function Contact() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <h2 className="text-3xl font-bold mb-4">Contact</h2>
-            <div className="flex flex-col space-y-4">
-                <div className="flex items-center space-x-2">
-                    <Phone className="w-6 h-6" />
-                    <a href="tel:+84935989512" className="hover:underline">
-                        (+84) 935 989 512
-                    </a>
-                </div>
-                <div className="flex items-center space-x-2">
-                    <Mail className="w-6 h-6" />
-                    <a href="mailto:dkon.de31337@gmail.com" className="hover:underline">
-                        dkon.de31337@gmail.com
-                    </a>
-                </div>
-                <div className="flex items-center space-x-2">
-                    <Linkedin className="w-6 h-6" />
-                    <a
-                        href="https://www.linkedin.com/in/ngo-truong-duy-cong-697726267/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline"
-                    >
-                        LinkedIn Profile
-                    </a>
+            <h2 className="text-4xl font-display uppercase border-b-4 border-neo-black mb-8 inline-block">Contact</h2>
+            <div className="bg-neo-white border-2 border-neo-black shadow-hard p-8">
+                <div className="flex flex-col space-y-6">
+                    <div className="flex items-center space-x-4 group">
+                        <div className="bg-neo-yellow p-2 border-2 border-neo-black group-hover:shadow-hard-sm transition-all">
+                            <Phone className="w-6 h-6 text-neo-black" />
+                        </div>
+                        <a href="tel:+84935989512" className="text-lg font-bold hover:underline decoration-2 underline-offset-4">
+                            (+84) 935 989 512
+                        </a>
+                    </div>
+                    <div className="flex items-center space-x-4 group">
+                        <div className="bg-neo-cyan p-2 border-2 border-neo-black group-hover:shadow-hard-sm transition-all">
+                             <Mail className="w-6 h-6 text-neo-black" />
+                        </div>
+                        <a href="mailto:dkon.de31337@gmail.com" className="text-lg font-bold hover:underline decoration-2 underline-offset-4">
+                            dkon.de31337@gmail.com
+                        </a>
+                    </div>
+                    <div className="flex items-center space-x-4 group">
+                         <div className="bg-neo-magenta p-2 border-2 border-neo-black group-hover:shadow-hard-sm transition-all">
+                             <Linkedin className="w-6 h-6 text-neo-black" />
+                        </div>
+                        <a
+                            href="https://www.linkedin.com/in/ngo-truong-duy-cong-697726267/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-lg font-bold hover:underline decoration-2 underline-offset-4"
+                        >
+                            LinkedIn Profile
+                        </a>
+                    </div>
                 </div>
             </div>
         </motion.section>

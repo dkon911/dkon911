@@ -45,14 +45,16 @@ export default function MiniMap() {
     }
 
     return (
-        <nav className="fixed right-4 top-1/2 transform -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg">
-            <ul className="space-y-2">
+        <nav className="fixed right-4 top-1/2 transform -translate-y-1/2 bg-neo-white p-4 border-2 border-neo-black shadow-hard z-50 hidden md:block">
+            <ul className="space-y-3">
                 {sections.map((section) => (
                     <li key={section.id}>
                         <button
                             onClick={() => handleClick(section.id)}
-                            className={`text-sm ${
-                                activeSection === section.id ? "text-primary font-bold" : "text-gray-500 hover:text-primary"
+                            className={`w-full text-left px-2 py-1 border-2 transition-all duration-200 uppercase font-bold text-xs ${
+                                activeSection === section.id 
+                                    ? "bg-neo-black text-neo-white border-neo-black shadow-none translate-x-[2px] translate-y-[2px]" 
+                                    : "bg-neo-white text-neo-black border-transparent hover:border-neo-black hover:shadow-hard-sm"
                             }`}
                         >
                             {section.name}

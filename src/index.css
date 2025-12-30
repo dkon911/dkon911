@@ -2,16 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary: 78, 104, 19;
-  --background: 240, 234, 214;
-  /* --primary: 240, 234, 214;
-  --background: 78, 104, 19; */
+@layer utilities {
+  .bg-halftone {
+    background-image: radial-gradient(rgb(var(--neo-border)) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .bg-halftone-sm {
+    background-image: radial-gradient(rgb(var(--neo-border)) 1px, transparent 1px);
+    background-size: 10px 10px;
+  }
 }
 
+:root {
+  /* Light Mode Palette */
+  --neo-bg: 244, 243, 240;      /* #F4F3F0 - Kem nhẹ */
+  --neo-text: 26, 26, 26;       /* #1A1A1A - Đen mềm */
+  --neo-border: 26, 26, 26;
+  --neo-shadow: 26, 26, 26;
+  
+  --neo-white: 255, 255, 255;   /* Nền card trắng */
+  --neo-black: 26, 26, 26;
+  
+  --grid-color: rgba(26, 26, 26, 0.08);
+}
+
+.dark {
+  /* Dark Mode Palette - Muted Industrial */
+  --neo-bg: 26, 26, 26;         /* #1A1A1A - Chuyển sang màu đen xám của text cũ */
+  --neo-text: 230, 230, 225;    /* #E6E6E1 - Trắng giấy cũ, dịu mắt hơn */
+  --neo-border: 230, 230, 225;
+  --neo-shadow: 230, 230, 225;  /* Shadow cùng màu border tạo khối 3D sạch */
+  
+  --neo-white: 38, 38, 38;      /* #262626 - Nền card xám đậm */
+  --neo-black: 230, 230, 225;   /* Chữ và icon chuyển sang trắng */
+  
+  --grid-color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- CURSOR HANDLING START --- */
+html, body, #root, * {
+  cursor: none !important;
+}
+
+@media (pointer: coarse) {
+  html, body, #root, * {
+    cursor: auto !important;
+  }
+}
+/* --- CURSOR HANDLING END --- */
+
 body {
-  color: rgb(var(--primary));
-  background: rgb(var(--background));
+  color: rgb(var(--neo-text));
+  background-color: rgb(var(--neo-bg));
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s, background-color 0.3s;
+  
+  /* Grid Pattern */
+  background-image: 
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-attachment: fixed;
 }
 
 #root {
@@ -23,17 +75,3 @@ body {
 .container {
   width: 100%;
 }
-
-/* Mini Map Styles */
-nav.fixed {
-  z-index: 1000;
-}
-
-nav.fixed button {
-  transition: all 0.3s ease;
-}
-
-nav.fixed button:hover {
-  transform: translateX(-5px);
-}
-
